@@ -7,7 +7,11 @@ const porjectShema = new mongoose.Schema({
     },
     code: {
         type: String,
-        require: [true, ''],
-        default: ' '
+        require: [true, 'code is required'],
+        default: ''
     }
 })
+
+const projectModel = mongoose.model('projects', porjectShema)
+
+module.exports = projectModel
