@@ -5,6 +5,8 @@ const router = express.Router()
 
 router.post('/create',createPorject)
 
+router.get('/list')
+
 
 
 
