@@ -23,4 +23,12 @@ module.exports.createPorject = async (req, res) => {
   }
 };
 
+module.exports.listAllPorject = async (req, res) => {
+    try {
+        const list = await projectModel.find()
 
+        res.status(200).json({ message: "list of all porjects", projects: list})
+    } catch (error) {
+        res.status(400).json({ message: error})
+    }
+}
