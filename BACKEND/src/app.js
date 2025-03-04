@@ -2,9 +2,11 @@ const express = require("express");
 const router = require("./routes/create.routes");
 const app = express();
 const morgon = require('morgan')
+const cors = require('cors')
 
 
 app.use(morgon('dev'))
+app.use(cors())
 app.use(
   express.json({
     limit: "10mb",
